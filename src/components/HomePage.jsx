@@ -8,7 +8,7 @@ import Contact from "./Contact/Contact";
 import Footer from "./Footer/Footer";
 import List from "./List/List";
 
-const Homepage = ({ theme }) => {
+const HomePage = ({ theme }) => {
   return (
     <>
       <Hero theme={theme} />
@@ -23,4 +23,4 @@ const Homepage = ({ theme }) => {
   );
 };
 
-export default Homepage;
+export default HomePage;
