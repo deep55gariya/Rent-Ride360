@@ -6,32 +6,24 @@ import { SlNote } from "react-icons/sl";
 const skillsData = [
   {
     name: "Best Price",
-    icon: (
-      <FaCameraRetro className="text-5xl text-primary group-hover:text-black duration-300" />
-    ),
+    icon: <FaCameraRetro className="text-5xl text-primary duration-300" />,
     link: "#",
     description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
-    aosDelay: "0",
   },
   {
     name: "Fast and Safe",
-    icon: (
-      <GiNotebook className="text-5xl text-primary group-hover:text-black duration-300" />
-    ),
+    icon: <GiNotebook className="text-5xl text-primary duration-300" />,
     link: "#",
     description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
-    aosDelay: "500",
   },
   {
     name: "Experience Drivers",
-    icon: (
-      <SlNote className="text-5xl text-primary group-hover:text-black duration-500" />
-    ),
+    icon: <SlNote className="text-5xl text-primary duration-300" />,
     link: "#",
     description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
-    aosDelay: "1000",
   },
 ];
+
 const Services = () => {
   return (
     <>
@@ -40,19 +32,19 @@ const Services = () => {
         <div className="container">
           <div className="pb-12">
             <h1
-              data-aos="fade-up"
               className="text-3xl font-semibold text-center sm:text-4xl font-serif"
+              data-aos="fade-up"
             >
               Why Choose Us
             </h1>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-            {skillsData.map((skill) => (
+            {skillsData.map((skill, index) => (
               <div
                 key={skill.name}
+                className="card text-center group space-y-3 sm:space-y-6 p-4 sm:py-16 bg-dark hover:bg-primary duration-300 text-white hover:text-black rounded-lg"
                 data-aos="fade-up"
-                data-aos-delay={skill.aosDelay}
-                className="card text-center group space-y-3 sm:space-y-6 p-4 sm:py-16 bg-dark  hover:bg-primary duration-300 text-white hover:text-black rounded-lg"
+                data-aos-delay={index * 200} // Optimized delays
               >
                 <div className="grid place-items-center">{skill.icon}</div>
                 <h1 className="text-2xl font-bold">{skill.name}</h1>

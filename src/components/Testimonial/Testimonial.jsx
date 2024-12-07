@@ -3,23 +3,18 @@ import React from "react";
 const testimonialData = [
   {
     name: "Dilshad",
-    image: "",
     description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
-    aosDelay: "0",
   },
   {
     name: "Satya",
-    image: "",
     description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
-    aosDelay: "300",
   },
   {
     name: "Sabir",
-    image: "",
     description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
-    aosDelay: "1000",
   },
 ];
+
 const Testimonial = () => {
   return (
     <>
@@ -40,24 +35,25 @@ const Testimonial = () => {
             </p>
           </div>
 
+          {/* Testimonials */}
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 text-black dark:text-white">
-            {testimonialData.map((skill) => (
+            {testimonialData.map((testimonial, index) => (
               <div
-                key={skill.name}
+                key={testimonial.name}
                 data-aos="fade-up"
-                data-aos-delay={skill.aosDelay}
-                className="card text-center group space-y-3 sm:space-y-6 p-4 sm:py-12 dark:bg-white/20 bg-gray-100 duration-300  rounded-lg "
+                data-aos-delay={index * 200} // Optimized delay
+                className="card text-center space-y-4 sm:space-y-6 p-4 sm:py-12 dark:bg-white/20 bg-gray-100 rounded-lg duration-300"
               >
-                <div className="grid place-items-center ">
+                <div className="grid place-items-center">
                   <img
-                    src="https://picsum.photos/200"
-                    alt=""
-                    className="rounded-full w-20 h-20"
+                    src="https://via.placeholder.com/100"
+                    alt={testimonial.name}
+                    className="rounded-full w-20 h-20 object-cover"
                   />
                 </div>
                 <div className="text-2xl">⭐⭐⭐⭐⭐</div>
-                <p>{skill.description}</p>
-                <p className="text-center font-semibold">{skill.name}</p>
+                <p>{testimonial.description}</p>
+                <p className="font-semibold">{testimonial.name}</p>
               </div>
             ))}
           </div>
