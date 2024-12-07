@@ -5,7 +5,7 @@ import "aos/dist/aos.css";
 
 // Component imports
 import Navbar from "./components/Navbar/Navbar";
-import HomePage from "./components/HomePage";
+import Homepage from "./components/Homepage";
 import CarList from "./components/CarList/CarList";
 import ScootyList from "./components/ScootyList/ScootyList"; // ScootyList component
 import BikeList from "./components/BikeList/BikeList"; // BikeList component
@@ -36,7 +36,7 @@ const App = () => {
       <div className="bg-white dark:bg-black dark:text-white text-black overflow-x-hidden">
         <Navbar theme={theme} setTheme={setTheme} />
         <Routes>
-          <Route path="/" element={<HomePage theme={theme} />} />
+          <Route path="/" element={<Homepage theme={theme} />} />
           <Route path="/cars" element={<CarList />} />
           <Route path="/scooties" element={<ScootyList />} />
           <Route path="/bikes" element={<BikeList />} />
