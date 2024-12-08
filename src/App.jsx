@@ -5,7 +5,7 @@ import "aos/dist/aos.css";
 
 // Component imports
 import Navbar from "./components/Navbar/Navbar";
-import HomePage from "./components/Homepage";
+import HomePage from "./components/HomePage";
 import CarList from "./components/CarList/CarList";
 import ScootyList from "./components/ScootyList/ScootyList";
 import BikeList from "./components/BikeList/BikeList";
