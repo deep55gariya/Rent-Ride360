@@ -76,12 +76,6 @@ const List = () => {
         </div>
       </div>
 
-      {/* Render the selected component here */}
-      <div className="mt-12">
-        <Suspense fallback={<p>Loading...</p>}>
-          {selectedItem || <p>Please select a category to view the details.</p>}
-        </Suspense>
-      </div>
     </>
   );
 };
