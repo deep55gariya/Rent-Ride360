@@ -15,87 +15,92 @@ export const Navlinks = [
     link: "/#cars",
   },
   {
-    id: 2,
+    id: 3,
     name: "BIKES",
     link: "/#Bikes",
   },
   {
-    id: 2,
+    id: 4,
     name: "SCOOTIES",
     link: "/#scooties",
   },
   {
-    id: 1,
+    id: 5,
     name: "ABOUT",
     link: "/#about",
   },
   {
-    id: 1,
+    id: 6,
     name: "BOOKING",
     link: "/#booking",
   },
 ];
+
 const Navbar = ({ theme, setTheme }) => {
   const [showMenu, setShowMenu] = useState(false);
 
   const toggleMenu = () => {
-    setShowMenu(!showMenu);
+    setShowMenu((prev) => !prev);
   };
+
   return (
     <div
-      className="relative z-10 shadow-md w-full dark:bg-black dark:text-white duration-300
-    "
+      className="relative z-10 shadow-md w-full dark:bg-black dark:text-white duration-300"
     >
       <div className="container py-2 md:py-0">
         <div className="flex justify-between items-center">
+          {/* Logo */}
           <div>
             <span className="text-3xl font-bold font-serif">Rent Ride360</span>
           </div>
+
+          {/* Desktop Navigation */}
           <nav className="hidden md:block">
             <ul className="flex items-center gap-8">
               {Navlinks.map(({ id, name, link }) => (
                 <li key={id} className="py-4">
                   <a
                     href={link}
-                    className=" text-lg font-medium  hover:text-primary py-2 hover:border-b-2 hover:border-primary transition-colors duration-500  "
+                    className="text-lg font-medium hover:text-primary py-2 hover:border-b-2 hover:border-primary transition-colors duration-500"
                   >
                     {name}
                   </a>
                 </li>
               ))}
-              {/* DarkMode feature implement */}
+              {/* Dark Mode Toggle */}
               {theme === "dark" ? (
                 <BiSolidSun
                   onClick={() => setTheme("light")}
-                  className="text-2xl"
+                  className="text-2xl cursor-pointer"
                 />
               ) : (
                 <BiSolidMoon
                   onClick={() => setTheme("dark")}
-                  className="text-2xl"
+                  className="text-2xl cursor-pointer"
                 />
               )}
             </ul>
           </nav>
-          {/* Mobile view  */}
-          <div className="flex items-center gap-4 md:hidden ">
-            {/* dark  mode */}
+
+          {/* Mobile View */}
+          <div className="flex items-center gap-4 md:hidden">
+            {/* Dark Mode Toggle */}
             {theme === "dark" ? (
               <BiSolidSun
                 onClick={() => setTheme("light")}
-                className="text-2xl"
+                className="text-2xl cursor-pointer"
               />
             ) : (
               <BiSolidMoon
                 onClick={() => setTheme("dark")}
-                className="text-2xl"
+                className="text-2xl cursor-pointer"
               />
             )}
-            {/* Mobile Hamburger icon */}
+            {/* Mobile Hamburger Icon */}
             {showMenu ? (
               <HiMenuAlt1
                 onClick={toggleMenu}
-                className=" cursor-pointer transition-all"
+                className="cursor-pointer transition-all"
                 size={30}
               />
             ) : (
@@ -108,7 +113,9 @@ const Navbar = ({ theme, setTheme }) => {
           </div>
         </div>
       </div>
-      <ResponsiveMenu showMenu={showMenu} />
+
+      {/* Responsive Menu */}
+      <ResponsiveMenu showMenu={showMenu} setShowMenu={setShowMenu} />
     </div>
   );
 };

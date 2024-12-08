@@ -1,39 +1,61 @@
-import React, { useEffect, useState } from "react";
-import carPng from "../../assets/car.webp";
-import yellowCar from "../../assets/banner-car.webp";
+import React, { useEffect } from "react";
+import carPng from "../../assets/car.jpeg";
+import yellowCar from "../../assets/banner-car1.png";
 import AOS from "aos";
 
 const Hero = ({ theme }) => {
   useEffect(() => {
     AOS.refresh();
-  });
+  }, []); // Run AOS refresh only once for performance.
 
   return (
     <div className="dark:bg-black dark:text-white duration-300">
       <div className="container min-h-[620px] flex">
         <div className="grid grid-cols-1 sm:grid-cols-2 place-items-center">
-          <div className="order-1 sm:order-2">
+          {/* Image Section */}
+          <div
+            data-aos="zoom-in"
+            data-aos-duration="800" // Reduced duration
+            className="order-1 sm:order-2"
+          >
             <img
               src={theme === "dark" ? carPng : yellowCar}
-              alt="Car Image"
-              loading="lazy"
-              width="600"
-              height="400"
+              alt="Car"
               className="sm:scale-125 relative -z-10 max-h-[600px] drop-shadow-[2px_20px_6px_rgba(0,0,0,0.50)]"
             />
           </div>
+
+          {/* Text Section */}
           <div className="space-y-5 order-2 sm:order-1 sm:pr-32">
-            <p className="text-primary text-2xl font-serif">Effortless</p>
-            <h1 className="text-5xl lg:text-7xl font-semibold font-serif">
+            <p
+              data-aos="fade-up"
+              data-aos-duration="500" // Fast display
+              className="text-primary text-2xl font-serif"
+            >
+              Effortless
+            </p>
+            <h1
+              data-aos="fade-up"
+              data-aos-duration="500" // Faster display
+              className="text-5xl lg:text-7xl font-semibold font-serif"
+            >
               Rent Ride360
             </h1>
-            <p className="text-xl sm:text-2xl font-semibold text-gray-800">
+            <p
+              data-aos="fade-up"
+              data-aos-duration="500" // Removed delay, faster display
+              className="text-xl sm:text-2xl font-semibold text-gray-800"
+            >
               Find your perfect ride and start your journey today! Whether you're
               looking for a car, bike, or scooter, we have a wide selection to
               make your adventure unforgettable.
             </p>
+
+            {/* Button */}
             <button
-              className="rounded-md bg-primary hover:bg-primary/80 transition duration-500 py-2 px-6 text-black"
+              data-aos="fade-up"
+              data-aos-duration="500" // Fast button display
+              className="rounded-md bg-primary hover:bg-primary/80 transition duration-300 py-2 px-6 text-black"
             >
               Get Started
             </button>

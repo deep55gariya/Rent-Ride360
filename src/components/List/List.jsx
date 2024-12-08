@@ -11,7 +11,7 @@ const BikeList = lazy(() => import("../BikeList/BikeList"));
 const skillsData = [
   {
     name: "Car",
-    icon: <FaCar className="text-5xl text-primary group-hover:text-black duration-300" />,
+    icon: <FaCar className="text-5xl text-primary group-hover:text-black duration-150" />,
     link: "/cars",
     description: "Experience the luxury and convenience of our premium cars.",
     aosDelay: "0",
@@ -19,18 +19,18 @@ const skillsData = [
   },
   {
     name: "Scooty",
-    icon: <GiScooter className="text-5xl text-primary group-hover:text-black duration-300" />,
+    icon: <GiScooter className="text-5xl text-primary group-hover:text-black duration-150" />,
     link: "/scooties",
     description: "Enjoy the freedom and mobility of our modern scooters.",
-    aosDelay: "300", // Reduced delay for optimization
+    aosDelay: "200", // Reduced delay for optimization
     component: <ScootyList />,
   },
   {
     name: "Bike",
-    icon: <FaBicycle className="text-5xl text-primary group-hover:text-black duration-300" />,
+    icon: <FaBicycle className="text-5xl text-primary group-hover:text-black duration-150" />,
     link: "/bikes",
     description: "Feel the thrill of the ride with our top-notch bikes.",
-    aosDelay: "600", // Reduced delay
+    aosDelay: "400", // Reduced delay
     component: <BikeList />,
   },
 ];
