@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import carPng from "../../assets/car.jpeg";
-import yellowCar from "../../assets/banner-car1.png";
+import yellowCar from "../../assets/banner-car.png";
 import AOS from "aos";
 
 const Hero = ({ theme }) => {
