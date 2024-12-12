@@ -3,6 +3,7 @@ import carPng from "../../assets/car.jpeg";
 import yellowCar from "../../assets/banner-car.png";
 import AOS from "aos";
 
+
 const Hero = ({ theme }) => {
   useEffect(() => {
     AOS.refresh();
@@ -30,21 +31,21 @@ const Hero = ({ theme }) => {
             <p
               data-aos="fade-up"
               data-aos-duration="500" // Fast display
-              className="text-primary text-2xl font-serif"
+              className="text-primary text-2xl font-serif  ml-5"
             >
               Effortless
             </p>
             <h1
               data-aos="fade-up"
               data-aos-duration="500" // Faster display
-              className="text-5xl lg:text-7xl font-semibold font-serif"
+              className="text-5xl lg:text-7xl font-semibold font-serif  ml-5"
             >
               Rent Ride360
             </h1>
             <p
               data-aos="fade-up"
               data-aos-duration="500" // Removed delay, faster display
-              className="text-xl sm:text-2xl font-semibold text-gray-800"
+              className="text-xl sm:text-2xl font-semibold text-gray-800   ml-5 "
             >
               Find your perfect ride and start your journey today! Whether you're
               looking for a car, bike, or scooter, we have a wide selection to
@@ -53,12 +54,14 @@ const Hero = ({ theme }) => {
 
             {/* Button */}
             <button
+
               data-aos="fade-up"
               data-aos-duration="500" // Fast button display
-              className="rounded-md bg-primary hover:bg-primary/80 transition duration-300 py-2 px-6 text-black"
-            >
+              className="rounded-md bg-primary hover:bg-primary/80 transition duration-300 py-2 px-6 text-black  ml-5"
+            > 
               Get Started
-            </button>
+             
+            </button> 
           </div>
         </div>
       </div>

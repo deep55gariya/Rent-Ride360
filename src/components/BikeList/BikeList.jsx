@@ -96,14 +96,7 @@ const CarList = () => {
 
         {/* End of car listing */}
 
-        <div className="grid place-items-center mt-8">
-          <button
-            data-aos="fade-up"
-            className="bg-primary text-white py-3 px-8 rounded-lg hover:bg-secondary transition-colors duration-300"
-          >
-            Get Started
-          </button>
-        </div>
+        
       </div>
     </div>
   );
