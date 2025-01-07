@@ -1,17 +1,21 @@
 import React, { useEffect, useState, useRef } from "react";
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
+import Cart from "./components/Cart/Cart";
+
 import AOS from "aos";
 import "aos/dist/aos.css";
 
 // Component imports
 import Navbar from "./components/Navbar/Navbar";
-import HomePage from "./components/HomePage";
+import HomePage from "./components/Homepage";
 import CarList from "./components/CarList/CarList";
 import ScootyList from "./components/ScootyList/ScootyList";
 import BikeList from "./components/BikeList/BikeList";
 import ResponsiveMenu from "./components/Navbar/ResponsiveMenu"; // ResponsiveMenu import
 
 const App = () => {
+
+  console.log(import.meta.env.VITE_APPWRITE_URL)
   const [theme, setTheme] = useState(
     localStorage.getItem("theme") ? localStorage.getItem("theme") : "light"
   );
@@ -66,6 +70,7 @@ const App = () => {
           <Route path="/cars" element={<CarList />} />
           <Route path="/scooties" element={<ScootyList />} />
           <Route path="/bikes" element={<BikeList />} />
+          <Route path="/cart" element={<Cart />} />
         </Routes>
       </div>
     </Router>
