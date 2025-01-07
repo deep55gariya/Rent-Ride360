@@ -6,7 +6,7 @@ import car3 from "../../assets/car6.png";
 
 const carList = [
   {
-    id: 1,
+    id: 4,
     name: "BMW UX",
     price: 100,
     image: whiteCar,
@@ -15,7 +15,7 @@ const carList = [
     distance: "12Km",
   },
   {
-    id: 2,
+    id: 5,
     name: "KIA UX",
     price: 140,
     image: car2,
@@ -24,7 +24,7 @@ const carList = [
     distance: "15Km",
   },
   {
-    id: 3,
+    id: 6,
     name: "Audi Q5",
     price: 120,
     image: car3,
