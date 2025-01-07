@@ -29,7 +29,6 @@ export const Navlinks = [
     name: "ABOUT",
     link: "/#about",
   },
-
   {
     id: 6,
     name: "Cart",
