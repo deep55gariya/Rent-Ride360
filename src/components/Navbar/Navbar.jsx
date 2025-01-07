@@ -34,6 +34,16 @@ export const Navlinks = [
     name: "BOOKING",
     link: "/#booking",
   },
+  {
+    id: 7,
+    name: "Cart",
+    link: "#Cart",
+  },
+  {
+    id: 8,
+    name: "SignIN",
+    link: "#Login",
+  },
 ];
 
 const Navbar = ({ theme, setTheme }) => {
