@@ -29,18 +29,14 @@ export const Navlinks = [
     name: "ABOUT",
     link: "/#about",
   },
+
   {
     id: 6,
-    name: "BOOKING",
-    link: "/#booking",
-  },
-  {
-    id: 7,
     name: "Cart",
     link: "#Cart",
   },
   {
-    id: 8,
+    id: 7,
     name: "SignIN",
     link: "#Login",
   },
