@@ -6,7 +6,7 @@ import car3 from "../../assets/scooty3.jpg";
 
 const scootyList = [
   {
-    id: 1,
+    id: 7,
     name: "Scooty UX",
     price: 100,
     image: whiteCar,
@@ -16,7 +16,7 @@ const scootyList = [
     aosDelay: "0",
   },
   {
-    id: 2,
+    id: 8,
     name: "KIA Scooty",
     price: 140,
     image: car2,
@@ -26,7 +26,7 @@ const scootyList = [
     aosDelay: "500",
   },
   {
-    id: 3,
+    id: 9,
     name: "Audi Scooty",
     price: 120,
     image: car3,
